@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -23,14 +25,15 @@ public class BaseClass {
     protected Properties prop;
     protected WebDriver driver;
 
+    @BeforeMethod
     public void setUp() throws IOException {
         //loading configuration file
         prop = new Properties();
-        FileInputStream file = new FileInputStream("src/main/resoources/config.properties");
+        FileInputStream file = new FileInputStream("src/main/resources/config.properties");
         prop.load(file);
         
         //initialize WebDriver based on browser defined in Copnf.properties file
-        String  browser = prop.getProperty("browser");
+        String browser = prop.getProperty("browser");
         
         if(browser.equalsIgnoreCase("chrome")){
             driver = new ChromeDriver();
@@ -51,5 +54,12 @@ public class BaseClass {
 
         //navigate to the url
         driver.get(prop.getProperty("url"));
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        if(driver != null){
+            driver.quit();
+        }
     }
 }
