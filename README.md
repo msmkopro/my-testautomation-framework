@@ -1,4 +1,4 @@
-This project is a test automation framework developed rom scratch using Java and Selenium
+This project is a test automation framework developed from scratch using Java and Selenium
 It is designed to provide a scalable, maintainable and reusable structure for automating web applications
 
 PURPOSE
