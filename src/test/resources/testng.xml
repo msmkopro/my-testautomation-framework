@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<root>
 
-</root>
+<suite name = "DemoSuite">
+        <test name = "DemoTest">
+            <classes>
+                <class name="com.demo.tests.DummyClass.DummyTest"/>
+                <class name="com.demo.tests.DummyClass.DummyTest2"/>
+            </classes>
+        </test>
+
+        <test name = "DemoTest2">
+            <classes>
+                <class name="com.demo.tests.DummyClass.DummyTest"/>
+                <class name="com.demo.tests.DummyClass.DummyTest2"/>
+            </classes>
+        </test>
+
+</suite>
+
+
+
+

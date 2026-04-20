@@ -1,4 +1,4 @@
-package com.demo.tests;
+package com.demo.tests.DummyClass;
 
 import com.demo.base.BaseClass;
 import org.testng.annotations.Test;
