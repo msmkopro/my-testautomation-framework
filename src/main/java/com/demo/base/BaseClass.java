@@ -90,6 +90,16 @@ public class BaseClass {
             }
         }
     }
+    //control access to the driver
+    //driver getter method: encapsulation
+    public WebDriver getDriver(){
+        return driver;
+    }
+
+    //driver setter method
+    public void setDriver(WebDriver driver){
+        this.driver = driver;
+    }
 
     //static wait method for pausing
     //using LockSupport instead of Thread.sleep
