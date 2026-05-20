@@ -28,6 +28,12 @@ public class ActionDriver {
         }
     }
 
+    //Entering text into an input field
+    public void enterText(By by, String text){
+            driver.findElement(by).clear();
+            driver.findElement(by).sendKeys(text);
+    }
+
     //wait for element to be clickable
     public void waitForElementToBeClickable(By by){
         try {
